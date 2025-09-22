@@ -1,0 +1,1475 @@
+{
+  "title" : "EEG Muse Sleep Study - Ch 1 - Stream 30s - order 10",
+  "source_file": "massimo_test_1_24139_24640_data.csv",
+  "column_name": "1",
+  "column_index": 1,
+  "start_sample": 28214,
+  "num_samples": 8113,
+  "sampling_frequency": 256.000000000000
+  ,
+  "param_ranges": {
+    "tc_min": 0.000000000000,
+    "tc_max": 511.000000000000,
+    "tc_step": 5.000000000000,
+    "fc_min": 0.300000000000,
+    "fc_max": 20.000000000000,
+    "fc_step": 1.000000000000,
+    "logDt_min": -1.897000000000,
+    "logDt_max": -0.105000000000,
+    "logDt_step": 0.080000000000,
+    "c_min": -20.000000000000,
+    "c_max": 20.000000000000,
+    "c_step": 1.000000000000
+  },
+  "analysis_type": "multi_sample_combined",
+  "num_chirps_per_window": 10,
+  "end_sample": 36327,
+  "overlap": 20,
+  "window_size": 512,
+  "window_starts": [28214, 28706, 29198, 29690, 30182, 30674, 31166, 31658, 32150, 32642, 33134, 33626, 34118, 34610, 35102, 35594],
+  "result": {
+    "error_per_window": [68.177285348074, 60.626135181232, 65.721741470764, 63.135158505011, 69.468370432418, 75.926191491819, 74.269538139262, 67.786082916866, 61.767856158284, 65.625464494192, 62.193313491574, 61.105817978123, 66.096618577992, 64.454322447078, 60.515182322162, 56.934851462123],
+    "chirplets": [
+      {
+        "index": 1,
+        "time_center_samples": 28396.484556082654,
+        "time_center_seconds": 110.923767797198,
+        "frequency_hz": 1.274676249666,
+        "duration_ms": 361.678349294724,
+        "chirp_rate_hz_per_s": 1.345093034819,
+        "coefficient": 146.285368445998
+      },
+      {
+        "index": 2,
+        "time_center_samples": 28426.186454499697,
+        "time_center_seconds": 111.039790837889,
+        "frequency_hz": 4.818960726066,
+        "duration_ms": 266.543183613091,
+        "chirp_rate_hz_per_s": -9.409310088151,
+        "coefficient": 95.136743076258
+      },
+      {
+        "index": 3,
+        "time_center_samples": 28253.431608134943,
+        "time_center_seconds": 110.364967219277,
+        "frequency_hz": 6.311884880283,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": -5.840378121626,
+        "coefficient": 74.741947250139
+      },
+      {
+        "index": 4,
+        "time_center_samples": 28228.278810636111,
+        "time_center_seconds": 110.266714104047,
+        "frequency_hz": 3.256483236838,
+        "duration_ms": 675.420875058665,
+        "chirp_rate_hz_per_s": 2.035725404362,
+        "coefficient": 47.646516108914
+      },
+      {
+        "index": 5,
+        "time_center_samples": 28339.922232747474,
+        "time_center_seconds": 110.702821221670,
+        "frequency_hz": 0.300000000000,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": -14.253902812007,
+        "coefficient": 38.351890493501
+      },
+      {
+        "index": 6,
+        "time_center_samples": 28612.138849221996,
+        "time_center_seconds": 111.766167379773,
+        "frequency_hz": 0.643717521445,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": -0.175475649164,
+        "coefficient": 39.410310817771
+      },
+      {
+        "index": 7,
+        "time_center_samples": 28484.473505674654,
+        "time_center_seconds": 111.267474631542,
+        "frequency_hz": 10.416562486348,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": -7.869958726992,
+        "coefficient": 32.488891652307
+      },
+      {
+        "index": 8,
+        "time_center_samples": 28468.247419912997,
+        "time_center_seconds": 111.204091484035,
+        "frequency_hz": 18.391445682427,
+        "duration_ms": 305.228909353967,
+        "chirp_rate_hz_per_s": -12.230289224735,
+        "coefficient": 27.659188315366
+      },
+      {
+        "index": 9,
+        "time_center_samples": 28528.467565804149,
+        "time_center_seconds": 111.439326428922,
+        "frequency_hz": 9.190023479371,
+        "duration_ms": 871.970226132110,
+        "chirp_rate_hz_per_s": 12.822195415658,
+        "coefficient": 27.117649655354
+      },
+      {
+        "index": 10,
+        "time_center_samples": 28505.504128791668,
+        "time_center_seconds": 111.349625503092,
+        "frequency_hz": 13.440473783001,
+        "duration_ms": 642.256936770412,
+        "chirp_rate_hz_per_s": 9.358617504758,
+        "coefficient": 24.070310933273
+      },
+      {
+        "index": 1,
+        "time_center_samples": 29080.233886662478,
+        "time_center_seconds": 113.594663619775,
+        "frequency_hz": 9.477696612976,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": 1.064664538956,
+        "coefficient": 66.098261051960
+      },
+      {
+        "index": 2,
+        "time_center_samples": 28943.871342009952,
+        "time_center_seconds": 113.061997429726,
+        "frequency_hz": 1.372272425330,
+        "duration_ms": 633.180340062760,
+        "chirp_rate_hz_per_s": 2.159048127302,
+        "coefficient": 38.176114587313
+      },
+      {
+        "index": 3,
+        "time_center_samples": 29115.748420899548,
+        "time_center_seconds": 113.733392269139,
+        "frequency_hz": 10.052080089794,
+        "duration_ms": 308.201958955051,
+        "chirp_rate_hz_per_s": -15.072101159537,
+        "coefficient": 38.356095258743
+      },
+      {
+        "index": 4,
+        "time_center_samples": 28867.021954254280,
+        "time_center_seconds": 112.761804508806,
+        "frequency_hz": 5.273550301924,
+        "duration_ms": 871.970226132110,
+        "chirp_rate_hz_per_s": -8.915618734118,
+        "coefficient": 31.982439945751
+      },
+      {
+        "index": 5,
+        "time_center_samples": 29016.081724749281,
+        "time_center_seconds": 113.344069237302,
+        "frequency_hz": 14.390307942993,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 17.971592165621,
+        "coefficient": 29.612028743045
+      },
+      {
+        "index": 6,
+        "time_center_samples": 28775.336273549856,
+        "time_center_seconds": 112.403657318554,
+        "frequency_hz": 10.332603743814,
+        "duration_ms": 670.211322969951,
+        "chirp_rate_hz_per_s": -18.899213172092,
+        "coefficient": 22.255023334064
+      },
+      {
+        "index": 7,
+        "time_center_samples": 28933.998202093844,
+        "time_center_seconds": 113.023430476929,
+        "frequency_hz": 5.978867857702,
+        "duration_ms": 633.180340062760,
+        "chirp_rate_hz_per_s": 16.731658224054,
+        "coefficient": 23.266700191785
+      },
+      {
+        "index": 8,
+        "time_center_samples": 29057.275403084688,
+        "time_center_seconds": 113.504982043300,
+        "frequency_hz": 10.284510380113,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": -13.866573698474,
+        "coefficient": 21.386291511060
+      },
+      {
+        "index": 9,
+        "time_center_samples": 28821.009270654806,
+        "time_center_seconds": 112.582067463495,
+        "frequency_hz": 18.372670898844,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": -5.127306030235,
+        "coefficient": 15.705351876636
+      },
+      {
+        "index": 10,
+        "time_center_samples": 29181.509801137112,
+        "time_center_seconds": 113.990272660692,
+        "frequency_hz": 17.116691133837,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -4.187440633312,
+        "coefficient": 16.705456754035
+      },
+      {
+        "index": 1,
+        "time_center_samples": 29422.203483608188,
+        "time_center_seconds": 114.930482357844,
+        "frequency_hz": 5.263470291713,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": 2.900079802053,
+        "coefficient": 58.876630325775
+      },
+      {
+        "index": 2,
+        "time_center_samples": 29386.587161584761,
+        "time_center_seconds": 114.791356099940,
+        "frequency_hz": 9.110391944504,
+        "duration_ms": 206.593951315024,
+        "chirp_rate_hz_per_s": 7.000000000000,
+        "coefficient": 51.611971810062
+      },
+      {
+        "index": 3,
+        "time_center_samples": 29263.332102318145,
+        "time_center_seconds": 114.309891024680,
+        "frequency_hz": 7.356491323256,
+        "duration_ms": 559.636917828680,
+        "chirp_rate_hz_per_s": 6.808859491737,
+        "coefficient": 41.513352079370
+      },
+      {
+        "index": 4,
+        "time_center_samples": 29668.384133355416,
+        "time_center_seconds": 115.892125520920,
+        "frequency_hz": 5.348239272143,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -3.984654056865,
+        "coefficient": 37.103704993719
+      },
+      {
+        "index": 5,
+        "time_center_samples": 29461.601678740932,
+        "time_center_seconds": 115.084381557582,
+        "frequency_hz": 5.499726252826,
+        "duration_ms": 577.874753264309,
+        "chirp_rate_hz_per_s": -19.957229232489,
+        "coefficient": 30.911749257626
+      },
+      {
+        "index": 6,
+        "time_center_samples": 29588.824131151563,
+        "time_center_seconds": 115.581344262311,
+        "frequency_hz": 16.371680203788,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -4.897021943709,
+        "coefficient": 27.914237686373
+      },
+      {
+        "index": 7,
+        "time_center_samples": 29619.592193873556,
+        "time_center_seconds": 115.701532007319,
+        "frequency_hz": 2.474741200890,
+        "duration_ms": 856.797879754775,
+        "chirp_rate_hz_per_s": -5.724231186705,
+        "coefficient": 27.125140150469
+      },
+      {
+        "index": 8,
+        "time_center_samples": 29628.302779572386,
+        "time_center_seconds": 115.735557732705,
+        "frequency_hz": 11.334169483537,
+        "duration_ms": 498.077296572962,
+        "chirp_rate_hz_per_s": -2.033630820222,
+        "coefficient": 21.847550350775
+      },
+      {
+        "index": 9,
+        "time_center_samples": 29426.779322960629,
+        "time_center_seconds": 114.948356730315,
+        "frequency_hz": 6.190203947654,
+        "duration_ms": 150.017998812653,
+        "chirp_rate_hz_per_s": -20.000000000000,
+        "coefficient": 20.350737000804
+      },
+      {
+        "index": 10,
+        "time_center_samples": 29553.080781824170,
+        "time_center_seconds": 115.441721804001,
+        "frequency_hz": 19.518528338838,
+        "duration_ms": 262.632385070765,
+        "chirp_rate_hz_per_s": 4.139196546222,
+        "coefficient": 18.892009338351
+      },
+      {
+        "index": 1,
+        "time_center_samples": 29883.635891813567,
+        "time_center_seconds": 116.732952702397,
+        "frequency_hz": 5.374866215650,
+        "duration_ms": 355.689086281710,
+        "chirp_rate_hz_per_s": -8.959910245315,
+        "coefficient": 69.869905693857
+      },
+      {
+        "index": 2,
+        "time_center_samples": 29799.727592174368,
+        "time_center_seconds": 116.405185906931,
+        "frequency_hz": 2.196766102781,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": -7.789730406531,
+        "coefficient": 55.886333027226
+      },
+      {
+        "index": 3,
+        "time_center_samples": 30071.731747598751,
+        "time_center_seconds": 117.467702139058,
+        "frequency_hz": 5.430274207641,
+        "duration_ms": 660.543522509419,
+        "chirp_rate_hz_per_s": -3.826171336235,
+        "coefficient": 44.297655320651
+      },
+      {
+        "index": 4,
+        "time_center_samples": 30036.267089641620,
+        "time_center_seconds": 117.329168318913,
+        "frequency_hz": 15.267666812697,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -0.853686482859,
+        "coefficient": 33.842889321181
+      },
+      {
+        "index": 5,
+        "time_center_samples": 29749.528091520930,
+        "time_center_seconds": 116.209094107504,
+        "frequency_hz": 7.767855455047,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -10.408248460845,
+        "coefficient": 36.144360380265
+      },
+      {
+        "index": 6,
+        "time_center_samples": 29697.951050826672,
+        "time_center_seconds": 116.007621292292,
+        "frequency_hz": 9.301770118474,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -14.905933779996,
+        "coefficient": 29.039981895794
+      },
+      {
+        "index": 7,
+        "time_center_samples": 29998.132284553580,
+        "time_center_seconds": 117.180204236537,
+        "frequency_hz": 2.449316280888,
+        "duration_ms": 262.632385070765,
+        "chirp_rate_hz_per_s": -11.512201477357,
+        "coefficient": 28.374449045471
+      },
+      {
+        "index": 8,
+        "time_center_samples": 30044.666998627654,
+        "time_center_seconds": 117.361980463389,
+        "frequency_hz": 15.193197603029,
+        "duration_ms": 215.048037901217,
+        "chirp_rate_hz_per_s": 6.955009426928,
+        "coefficient": 21.462421958795
+      },
+      {
+        "index": 9,
+        "time_center_samples": 29690.000000000000,
+        "time_center_seconds": 115.976562500000,
+        "frequency_hz": 11.383674157797,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 5.969113276437,
+        "coefficient": 18.660490653692
+      },
+      {
+        "index": 10,
+        "time_center_samples": 30022.285442646833,
+        "time_center_seconds": 117.274552510339,
+        "frequency_hz": 10.462462082754,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 7.225146069150,
+        "coefficient": 19.105573025130
+      },
+      {
+        "index": 1,
+        "time_center_samples": 30192.396742584497,
+        "time_center_seconds": 117.939049775721,
+        "frequency_hz": 11.222463277674,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -4.936190621715,
+        "coefficient": 48.314146408527
+      },
+      {
+        "index": 2,
+        "time_center_samples": 30682.821081584505,
+        "time_center_seconds": 119.854769849939,
+        "frequency_hz": 10.051859675904,
+        "duration_ms": 894.418168319835,
+        "chirp_rate_hz_per_s": 2.748943549624,
+        "coefficient": 44.789460245692
+      },
+      {
+        "index": 3,
+        "time_center_samples": 30571.676433900200,
+        "time_center_seconds": 119.420611069923,
+        "frequency_hz": 12.431254796899,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 12.144914966965,
+        "coefficient": 39.006198153934
+      },
+      {
+        "index": 4,
+        "time_center_samples": 30640.166567610358,
+        "time_center_seconds": 119.688150654728,
+        "frequency_hz": 0.300000000000,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 6.061052242325,
+        "coefficient": 34.821417389042
+      },
+      {
+        "index": 5,
+        "time_center_samples": 30433.866090876476,
+        "time_center_seconds": 118.882289417486,
+        "frequency_hz": 9.099407215092,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 6.820130415426,
+        "coefficient": 35.802288217483
+      },
+      {
+        "index": 6,
+        "time_center_samples": 30390.150026602092,
+        "time_center_seconds": 118.711523541414,
+        "frequency_hz": 4.364369355905,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -6.032627529692,
+        "coefficient": 33.363230560552
+      },
+      {
+        "index": 7,
+        "time_center_samples": 30616.301214720876,
+        "time_center_seconds": 119.594926620003,
+        "frequency_hz": 8.014663754315,
+        "duration_ms": 743.044012361940,
+        "chirp_rate_hz_per_s": -10.529309537250,
+        "coefficient": 28.335163253623
+      },
+      {
+        "index": 8,
+        "time_center_samples": 30226.020599316209,
+        "time_center_seconds": 118.070392966079,
+        "frequency_hz": 3.184980657262,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -3.927424397611,
+        "coefficient": 27.281137824629
+      },
+      {
+        "index": 9,
+        "time_center_samples": 30427.494712548785,
+        "time_center_seconds": 118.857401220894,
+        "frequency_hz": 14.394438092277,
+        "duration_ms": 498.077296572962,
+        "chirp_rate_hz_per_s": -6.731354060353,
+        "coefficient": 23.417945675866
+      },
+      {
+        "index": 10,
+        "time_center_samples": 30262.222939293355,
+        "time_center_seconds": 118.211808356615,
+        "frequency_hz": 19.089368811039,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -7.789084546390,
+        "coefficient": 21.852636803800
+      },
+      {
+        "index": 1,
+        "time_center_samples": 31183.469889241998,
+        "time_center_seconds": 121.810429254852,
+        "frequency_hz": 1.398741930314,
+        "duration_ms": 804.929969305002,
+        "chirp_rate_hz_per_s": 0.107783196088,
+        "coefficient": 208.463719775922
+      },
+      {
+        "index": 2,
+        "time_center_samples": 31081.025886027870,
+        "time_center_seconds": 121.410257367296,
+        "frequency_hz": 6.319153238629,
+        "duration_ms": 488.670104044201,
+        "chirp_rate_hz_per_s": -5.550067215942,
+        "coefficient": 111.436621463286
+      },
+      {
+        "index": 3,
+        "time_center_samples": 31011.613803879001,
+        "time_center_seconds": 121.139116421402,
+        "frequency_hz": 2.260100447797,
+        "duration_ms": 262.632385070765,
+        "chirp_rate_hz_per_s": 0.472833751773,
+        "coefficient": 89.628207123713
+      },
+      {
+        "index": 4,
+        "time_center_samples": 31172.534101419082,
+        "time_center_seconds": 121.767711333668,
+        "frequency_hz": 11.572678367950,
+        "duration_ms": 190.710253523503,
+        "chirp_rate_hz_per_s": 12.737312036992,
+        "coefficient": 50.978192487687
+      },
+      {
+        "index": 5,
+        "time_center_samples": 30899.000000000000,
+        "time_center_seconds": 120.699218750000,
+        "frequency_hz": 0.346795876379,
+        "duration_ms": 584.499122122583,
+        "chirp_rate_hz_per_s": -2.079631345453,
+        "coefficient": 45.667343405999
+      },
+      {
+        "index": 6,
+        "time_center_samples": 30925.388604943073,
+        "time_center_seconds": 120.802299238059,
+        "frequency_hz": 9.050560821771,
+        "duration_ms": 255.492976883932,
+        "chirp_rate_hz_per_s": -4.000000000000,
+        "coefficient": 45.052607125277
+      },
+      {
+        "index": 7,
+        "time_center_samples": 31175.514511216363,
+        "time_center_seconds": 121.779353559439,
+        "frequency_hz": 15.270435488483,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 10.947250965668,
+        "coefficient": 38.030452760003
+      },
+      {
+        "index": 8,
+        "time_center_samples": 31104.120331250921,
+        "time_center_seconds": 121.500470043949,
+        "frequency_hz": 10.393961077243,
+        "duration_ms": 584.499122122583,
+        "chirp_rate_hz_per_s": -6.695109990541,
+        "coefficient": 32.426484895773
+      },
+      {
+        "index": 9,
+        "time_center_samples": 30747.937039114357,
+        "time_center_seconds": 120.109129059040,
+        "frequency_hz": 8.399378538320,
+        "duration_ms": 743.044012361940,
+        "chirp_rate_hz_per_s": -13.275336511909,
+        "coefficient": 31.333374405919
+      },
+      {
+        "index": 10,
+        "time_center_samples": 31061.594764622776,
+        "time_center_seconds": 121.334354549308,
+        "frequency_hz": 4.257381797355,
+        "duration_ms": 743.044012361940,
+        "chirp_rate_hz_per_s": -6.729089793909,
+        "coefficient": 26.467671702793
+      },
+      {
+        "index": 1,
+        "time_center_samples": 31228.343900890217,
+        "time_center_seconds": 121.985718362852,
+        "frequency_hz": 1.186209065480,
+        "duration_ms": 584.499122122583,
+        "chirp_rate_hz_per_s": -0.770860746515,
+        "coefficient": 190.712527310253
+      },
+      {
+        "index": 2,
+        "time_center_samples": 31514.249648151894,
+        "time_center_seconds": 123.102537688093,
+        "frequency_hz": 7.285454861391,
+        "duration_ms": 235.628069204594,
+        "chirp_rate_hz_per_s": 0.306408510147,
+        "coefficient": 150.828753235009
+      },
+      {
+        "index": 3,
+        "time_center_samples": 31169.031691045973,
+        "time_center_seconds": 121.754030043148,
+        "frequency_hz": 5.888063053861,
+        "duration_ms": 397.557210435439,
+        "chirp_rate_hz_per_s": -10.121175865018,
+        "coefficient": 95.593156651945
+      },
+      {
+        "index": 4,
+        "time_center_samples": 31398.543921505021,
+        "time_center_seconds": 122.650562193379,
+        "frequency_hz": 3.287059600523,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -1.002645175379,
+        "coefficient": 73.444705318592
+      },
+      {
+        "index": 5,
+        "time_center_samples": 31382.107444529687,
+        "time_center_seconds": 122.586357205194,
+        "frequency_hz": 7.409308924851,
+        "duration_ms": 333.871196368095,
+        "chirp_rate_hz_per_s": 4.298314270830,
+        "coefficient": 54.134448963557
+      },
+      {
+        "index": 6,
+        "time_center_samples": 31647.515358096622,
+        "time_center_seconds": 123.623106867565,
+        "frequency_hz": 8.479994685797,
+        "duration_ms": 722.812361997875,
+        "chirp_rate_hz_per_s": 19.122306298420,
+        "coefficient": 45.555217023760
+      },
+      {
+        "index": 7,
+        "time_center_samples": 31501.000000000000,
+        "time_center_seconds": 123.050781250000,
+        "frequency_hz": 0.612265292710,
+        "duration_ms": 389.464937962970,
+        "chirp_rate_hz_per_s": 16.226358262070,
+        "coefficient": 36.966098962680
+      },
+      {
+        "index": 8,
+        "time_center_samples": 31516.555126523272,
+        "time_center_seconds": 123.111543462982,
+        "frequency_hz": 9.942539506563,
+        "duration_ms": 391.801478449000,
+        "chirp_rate_hz_per_s": -12.736218434533,
+        "coefficient": 36.532327110998
+      },
+      {
+        "index": 9,
+        "time_center_samples": 31211.655841026306,
+        "time_center_seconds": 121.920530629009,
+        "frequency_hz": 12.325182672452,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -10.091731701763,
+        "coefficient": 29.932905834210
+      },
+      {
+        "index": 10,
+        "time_center_samples": 31200.980993821035,
+        "time_center_seconds": 121.878832007113,
+        "frequency_hz": 7.375508876563,
+        "duration_ms": 361.678349294724,
+        "chirp_rate_hz_per_s": -15.733343589677,
+        "coefficient": 27.761408090867
+      },
+      {
+        "index": 1,
+        "time_center_samples": 32062.765714647030,
+        "time_center_seconds": 125.245178572840,
+        "frequency_hz": 3.127932019790,
+        "duration_ms": 403.052726080686,
+        "chirp_rate_hz_per_s": -5.528870395203,
+        "coefficient": 84.524546806374
+      },
+      {
+        "index": 2,
+        "time_center_samples": 31781.521028902611,
+        "time_center_seconds": 124.146566519151,
+        "frequency_hz": 6.445451889778,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": -3.185972712119,
+        "coefficient": 76.697375418048
+      },
+      {
+        "index": 3,
+        "time_center_samples": 31832.201238879181,
+        "time_center_seconds": 124.344536089372,
+        "frequency_hz": 9.358148002787,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -0.097456210001,
+        "coefficient": 55.123869714664
+      },
+      {
+        "index": 4,
+        "time_center_samples": 31698.000000000000,
+        "time_center_seconds": 123.820312500000,
+        "frequency_hz": 0.441957189917,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 1.946322030498,
+        "coefficient": 47.285149226905
+      },
+      {
+        "index": 5,
+        "time_center_samples": 31982.075442913669,
+        "time_center_seconds": 124.929982198882,
+        "frequency_hz": 3.110665661327,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": 5.314622555768,
+        "coefficient": 41.383089695769
+      },
+      {
+        "index": 6,
+        "time_center_samples": 31897.643513145333,
+        "time_center_seconds": 124.600169973224,
+        "frequency_hz": 9.402894125814,
+        "duration_ms": 150.017998812653,
+        "chirp_rate_hz_per_s": -17.000000000000,
+        "coefficient": 32.239680621494
+      },
+      {
+        "index": 7,
+        "time_center_samples": 32169.000000000000,
+        "time_center_seconds": 125.660156250000,
+        "frequency_hz": 5.215025264931,
+        "duration_ms": 358.092338414456,
+        "chirp_rate_hz_per_s": 15.606955582931,
+        "coefficient": 30.113969425582
+      },
+      {
+        "index": 8,
+        "time_center_samples": 31783.035596626618,
+        "time_center_seconds": 124.152482799323,
+        "frequency_hz": 0.300000000000,
+        "duration_ms": 724.838740647010,
+        "chirp_rate_hz_per_s": 12.076904563053,
+        "coefficient": 26.773126714282
+      },
+      {
+        "index": 9,
+        "time_center_samples": 31749.271523507257,
+        "time_center_seconds": 124.020591888700,
+        "frequency_hz": 8.390828583599,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 2.997921454934,
+        "coefficient": 23.304924380794
+      },
+      {
+        "index": 10,
+        "time_center_samples": 31713.809020345947,
+        "time_center_seconds": 123.882066485726,
+        "frequency_hz": 13.186168639402,
+        "duration_ms": 710.291586520953,
+        "chirp_rate_hz_per_s": -18.967640746377,
+        "coefficient": 21.906647315171
+      },
+      {
+        "index": 1,
+        "time_center_samples": 32641.845791544129,
+        "time_center_seconds": 127.507210123219,
+        "frequency_hz": 2.693193271101,
+        "duration_ms": 308.916867174780,
+        "chirp_rate_hz_per_s": 7.000000000000,
+        "coefficient": 111.769312758581
+      },
+      {
+        "index": 2,
+        "time_center_samples": 32279.927624020856,
+        "time_center_seconds": 126.093467281331,
+        "frequency_hz": 8.319439122421,
+        "duration_ms": 839.439088201772,
+        "chirp_rate_hz_per_s": -6.941746844122,
+        "coefficient": 53.302726254333
+      },
+      {
+        "index": 3,
+        "time_center_samples": 32411.123144273522,
+        "time_center_seconds": 126.605949782318,
+        "frequency_hz": 5.957191164512,
+        "duration_ms": 150.017998812653,
+        "chirp_rate_hz_per_s": -20.000000000000,
+        "coefficient": 36.021889277458
+      },
+      {
+        "index": 4,
+        "time_center_samples": 32324.593962239866,
+        "time_center_seconds": 126.267945164999,
+        "frequency_hz": 3.262080473442,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 3.932701801287,
+        "coefficient": 39.637536760210
+      },
+      {
+        "index": 5,
+        "time_center_samples": 32468.642646308548,
+        "time_center_seconds": 126.830635337143,
+        "frequency_hz": 5.311074188085,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": 11.068341803813,
+        "coefficient": 32.664785230445
+      },
+      {
+        "index": 6,
+        "time_center_samples": 32432.184323796817,
+        "time_center_seconds": 126.688220014831,
+        "frequency_hz": 13.019743090389,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": -13.601664985592,
+        "coefficient": 31.431668181402
+      },
+      {
+        "index": 7,
+        "time_center_samples": 32297.361860966514,
+        "time_center_seconds": 126.161569769400,
+        "frequency_hz": 4.268464584181,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": -6.760096529129,
+        "coefficient": 27.851397723047
+      },
+      {
+        "index": 8,
+        "time_center_samples": 32493.821156432885,
+        "time_center_seconds": 126.928988892316,
+        "frequency_hz": 11.182629575013,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 10.941584252749,
+        "coefficient": 21.237090471895
+      },
+      {
+        "index": 9,
+        "time_center_samples": 32410.013477645705,
+        "time_center_seconds": 126.601615147054,
+        "frequency_hz": 7.368235475671,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 0.966593233203,
+        "coefficient": 19.810836904558
+      },
+      {
+        "index": 10,
+        "time_center_samples": 32175.482892987304,
+        "time_center_seconds": 125.685480050732,
+        "frequency_hz": 14.421501999597,
+        "duration_ms": 743.044012361940,
+        "chirp_rate_hz_per_s": -19.199076565131,
+        "coefficient": 17.713503077056
+      },
+      {
+        "index": 1,
+        "time_center_samples": 32652.000000000000,
+        "time_center_seconds": 127.546875000000,
+        "frequency_hz": 2.089954303946,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": -2.485511969615,
+        "coefficient": 102.065301882252
+      },
+      {
+        "index": 2,
+        "time_center_samples": 32944.720126948203,
+        "time_center_seconds": 128.690312995891,
+        "frequency_hz": 3.361384494015,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": -1.151946813884,
+        "coefficient": 58.336191441086
+      },
+      {
+        "index": 3,
+        "time_center_samples": 32676.612328156843,
+        "time_center_seconds": 127.643016906863,
+        "frequency_hz": 7.345112146929,
+        "duration_ms": 741.550993410975,
+        "chirp_rate_hz_per_s": 0.744409304237,
+        "coefficient": 54.016332954269
+      },
+      {
+        "index": 4,
+        "time_center_samples": 32809.195592835742,
+        "time_center_seconds": 128.160920284515,
+        "frequency_hz": 8.138837666477,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -7.833093498808,
+        "coefficient": 36.660245330858
+      },
+      {
+        "index": 5,
+        "time_center_samples": 32703.821075840919,
+        "time_center_seconds": 127.749301077504,
+        "frequency_hz": 12.273616595049,
+        "duration_ms": 743.044012361940,
+        "chirp_rate_hz_per_s": -0.842933341099,
+        "coefficient": 30.267570744888
+      },
+      {
+        "index": 6,
+        "time_center_samples": 32757.321115025723,
+        "time_center_seconds": 127.958285605569,
+        "frequency_hz": 17.191174485675,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 1.118089320399,
+        "coefficient": 26.983189389756
+      },
+      {
+        "index": 7,
+        "time_center_samples": 33042.612913026176,
+        "time_center_seconds": 129.072706691509,
+        "frequency_hz": 1.151517348027,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -3.266119714367,
+        "coefficient": 26.710712929188
+      },
+      {
+        "index": 8,
+        "time_center_samples": 32956.709058304150,
+        "time_center_seconds": 128.737144759001,
+        "frequency_hz": 14.481615384150,
+        "duration_ms": 206.593951315024,
+        "chirp_rate_hz_per_s": 6.183359323948,
+        "coefficient": 23.523049092831
+      },
+      {
+        "index": 9,
+        "time_center_samples": 32847.013210154008,
+        "time_center_seconds": 128.308645352164,
+        "frequency_hz": 5.343358578986,
+        "duration_ms": 785.568840791324,
+        "chirp_rate_hz_per_s": -18.016582851141,
+        "coefficient": 19.471846046633
+      },
+      {
+        "index": 10,
+        "time_center_samples": 32793.179985506220,
+        "time_center_seconds": 128.098359318384,
+        "frequency_hz": 7.135481198294,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -19.891304416529,
+        "coefficient": 17.179975260931
+      },
+      {
+        "index": 1,
+        "time_center_samples": 33345.156267463026,
+        "time_center_seconds": 130.254516669777,
+        "frequency_hz": 5.208273673707,
+        "duration_ms": 562.586003124228,
+        "chirp_rate_hz_per_s": -3.927464741642,
+        "coefficient": 70.571321114274
+      },
+      {
+        "index": 2,
+        "time_center_samples": 33621.178768923237,
+        "time_center_seconds": 131.332729566106,
+        "frequency_hz": 4.309302788309,
+        "duration_ms": 464.340268699471,
+        "chirp_rate_hz_per_s": -1.081692377384,
+        "coefficient": 56.344972078517
+      },
+      {
+        "index": 3,
+        "time_center_samples": 33149.000000000000,
+        "time_center_seconds": 129.488281250000,
+        "frequency_hz": 3.180561674455,
+        "duration_ms": 481.875347537110,
+        "chirp_rate_hz_per_s": -11.337813541562,
+        "coefficient": 52.114866841455
+      },
+      {
+        "index": 4,
+        "time_center_samples": 33339.684224779041,
+        "time_center_seconds": 130.233141503043,
+        "frequency_hz": 8.363846365302,
+        "duration_ms": 538.443654549697,
+        "chirp_rate_hz_per_s": -0.878772671230,
+        "coefficient": 40.276613162707
+      },
+      {
+        "index": 5,
+        "time_center_samples": 33212.366399535276,
+        "time_center_seconds": 129.735806248185,
+        "frequency_hz": 6.182606625548,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -4.874622997370,
+        "coefficient": 34.094855929559
+      },
+      {
+        "index": 6,
+        "time_center_samples": 33582.958110774176,
+        "time_center_seconds": 131.183430120212,
+        "frequency_hz": 12.049022605283,
+        "duration_ms": 150.017998812653,
+        "chirp_rate_hz_per_s": 20.000000000000,
+        "coefficient": 34.995063165005
+      },
+      {
+        "index": 7,
+        "time_center_samples": 33208.258644278576,
+        "time_center_seconds": 129.719760329213,
+        "frequency_hz": 16.481305657760,
+        "duration_ms": 234.015810494477,
+        "chirp_rate_hz_per_s": -5.667608195405,
+        "coefficient": 32.845057281044
+      },
+      {
+        "index": 8,
+        "time_center_samples": 33609.289760496897,
+        "time_center_seconds": 131.286288126941,
+        "frequency_hz": 18.103126922391,
+        "duration_ms": 293.459091022111,
+        "chirp_rate_hz_per_s": -9.238860989674,
+        "coefficient": 25.717453824846
+      },
+      {
+        "index": 9,
+        "time_center_samples": 33469.072309117997,
+        "time_center_seconds": 130.738563707492,
+        "frequency_hz": 12.228319150200,
+        "duration_ms": 818.832341287223,
+        "chirp_rate_hz_per_s": -5.106175805708,
+        "coefficient": 23.255185770766
+      },
+      {
+        "index": 10,
+        "time_center_samples": 33215.995212806134,
+        "time_center_seconds": 129.749981300024,
+        "frequency_hz": 3.465997807775,
+        "duration_ms": 302.130575534925,
+        "chirp_rate_hz_per_s": -5.725795072051,
+        "coefficient": 21.750351631368
+      },
+      {
+        "index": 1,
+        "time_center_samples": 34059.942761470433,
+        "time_center_seconds": 133.046651411994,
+        "frequency_hz": 5.399920400737,
+        "duration_ms": 498.077296572962,
+        "chirp_rate_hz_per_s": 1.728998500421,
+        "coefficient": 63.898616467144
+      },
+      {
+        "index": 2,
+        "time_center_samples": 33701.802265679195,
+        "time_center_seconds": 131.647665100309,
+        "frequency_hz": 3.122523396119,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -0.791746583666,
+        "coefficient": 46.673079569192
+      },
+      {
+        "index": 3,
+        "time_center_samples": 33861.000000000000,
+        "time_center_seconds": 132.269531250000,
+        "frequency_hz": 0.968963525014,
+        "duration_ms": 685.916073896021,
+        "chirp_rate_hz_per_s": 6.834948229276,
+        "coefficient": 38.710707863955
+      },
+      {
+        "index": 4,
+        "time_center_samples": 33863.911124705184,
+        "time_center_seconds": 132.280902830880,
+        "frequency_hz": 3.249935889795,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 6.967275624234,
+        "coefficient": 34.751125087586
+      },
+      {
+        "index": 5,
+        "time_center_samples": 33881.116573296182,
+        "time_center_seconds": 132.348111614438,
+        "frequency_hz": 11.424970615353,
+        "duration_ms": 267.753210616510,
+        "chirp_rate_hz_per_s": -7.752145314178,
+        "coefficient": 35.036762583699
+      },
+      {
+        "index": 6,
+        "time_center_samples": 34086.022003549151,
+        "time_center_seconds": 133.148523451364,
+        "frequency_hz": 3.028266226965,
+        "duration_ms": 361.678349294724,
+        "chirp_rate_hz_per_s": 4.898602652742,
+        "coefficient": 31.664193515986
+      },
+      {
+        "index": 7,
+        "time_center_samples": 33764.588388475531,
+        "time_center_seconds": 131.892923392483,
+        "frequency_hz": 9.591389311195,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -14.170378966071,
+        "coefficient": 24.091125882829
+      },
+      {
+        "index": 8,
+        "time_center_samples": 33680.438340806621,
+        "time_center_seconds": 131.564212268776,
+        "frequency_hz": 13.481438862100,
+        "duration_ms": 786.058559492517,
+        "chirp_rate_hz_per_s": -14.179737710153,
+        "coefficient": 23.478966497076
+      },
+      {
+        "index": 9,
+        "time_center_samples": 33795.488532040996,
+        "time_center_seconds": 132.013627078285,
+        "frequency_hz": 13.119819551541,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": 12.858595709556,
+        "coefficient": 22.846903278134
+      },
+      {
+        "index": 10,
+        "time_center_samples": 34087.211348441298,
+        "time_center_seconds": 133.153169329849,
+        "frequency_hz": 10.852594235399,
+        "duration_ms": 871.970226132110,
+        "chirp_rate_hz_per_s": -2.492756616440,
+        "coefficient": 21.526036236266
+      },
+      {
+        "index": 1,
+        "time_center_samples": 34467.869092646964,
+        "time_center_seconds": 134.640113643152,
+        "frequency_hz": 5.227516950333,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": 12.618705759875,
+        "coefficient": 54.136880079524
+      },
+      {
+        "index": 2,
+        "time_center_samples": 34203.483700275217,
+        "time_center_seconds": 133.607358204200,
+        "frequency_hz": 10.231642993796,
+        "duration_ms": 308.201958955051,
+        "chirp_rate_hz_per_s": -4.313269675219,
+        "coefficient": 50.514182524373
+      },
+      {
+        "index": 3,
+        "time_center_samples": 34518.367981411269,
+        "time_center_seconds": 134.837374927388,
+        "frequency_hz": 11.268155881768,
+        "duration_ms": 584.499122122583,
+        "chirp_rate_hz_per_s": -0.800216445953,
+        "coefficient": 46.898195537142
+      },
+      {
+        "index": 4,
+        "time_center_samples": 34179.729660963225,
+        "time_center_seconds": 133.514568988138,
+        "frequency_hz": 3.267825170268,
+        "duration_ms": 361.678349294724,
+        "chirp_rate_hz_per_s": 2.419189845298,
+        "coefficient": 39.007390933119
+      },
+      {
+        "index": 5,
+        "time_center_samples": 34408.543352042187,
+        "time_center_seconds": 134.408372468915,
+        "frequency_hz": 8.265897778334,
+        "duration_ms": 333.871196368095,
+        "chirp_rate_hz_per_s": -3.162278770235,
+        "coefficient": 35.249970242450
+      },
+      {
+        "index": 6,
+        "time_center_samples": 34313.000000000000,
+        "time_center_seconds": 134.035156250000,
+        "frequency_hz": 2.940465516847,
+        "duration_ms": 639.976784150431,
+        "chirp_rate_hz_per_s": -16.982556786894,
+        "coefficient": 33.295819552148
+      },
+      {
+        "index": 7,
+        "time_center_samples": 34618.830848923149,
+        "time_center_seconds": 135.229808003606,
+        "frequency_hz": 8.676913052781,
+        "duration_ms": 361.678349294724,
+        "chirp_rate_hz_per_s": 15.640115111503,
+        "coefficient": 30.670080855223
+      },
+      {
+        "index": 8,
+        "time_center_samples": 34136.846877642129,
+        "time_center_seconds": 133.347058115790,
+        "frequency_hz": 11.101328258374,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 4.154378549225,
+        "coefficient": 27.004448133968
+      },
+      {
+        "index": 9,
+        "time_center_samples": 34413.698021294491,
+        "time_center_seconds": 134.428507895682,
+        "frequency_hz": 17.279896746397,
+        "duration_ms": 539.560694079995,
+        "chirp_rate_hz_per_s": -2.676425385118,
+        "coefficient": 24.228725639281
+      },
+      {
+        "index": 10,
+        "time_center_samples": 34220.348534598139,
+        "time_center_seconds": 133.673236463274,
+        "frequency_hz": 6.512846141636,
+        "duration_ms": 584.499122122583,
+        "chirp_rate_hz_per_s": 19.374630146623,
+        "coefficient": 21.276083534284
+      },
+      {
+        "index": 1,
+        "time_center_samples": 34615.000000000000,
+        "time_center_seconds": 135.214843750000,
+        "frequency_hz": 2.752157242023,
+        "duration_ms": 633.180340062760,
+        "chirp_rate_hz_per_s": 3.542934575055,
+        "coefficient": 66.212122167139
+      },
+      {
+        "index": 2,
+        "time_center_samples": 35032.208606381464,
+        "time_center_seconds": 136.844564868678,
+        "frequency_hz": 5.592770962654,
+        "duration_ms": 308.201958955051,
+        "chirp_rate_hz_per_s": 12.578239384603,
+        "coefficient": 49.532282539026
+      },
+      {
+        "index": 3,
+        "time_center_samples": 34770.664157209401,
+        "time_center_seconds": 135.822906864099,
+        "frequency_hz": 9.469971455525,
+        "duration_ms": 308.201958955051,
+        "chirp_rate_hz_per_s": 3.201721733372,
+        "coefficient": 40.802426490538
+      },
+      {
+        "index": 4,
+        "time_center_samples": 35072.821668771030,
+        "time_center_seconds": 137.003209643637,
+        "frequency_hz": 3.227174976938,
+        "duration_ms": 361.678349294724,
+        "chirp_rate_hz_per_s": 9.203858279889,
+        "coefficient": 39.324859842204
+      },
+      {
+        "index": 5,
+        "time_center_samples": 34635.356109607157,
+        "time_center_seconds": 135.294359803153,
+        "frequency_hz": 11.184812495019,
+        "duration_ms": 150.017998812653,
+        "chirp_rate_hz_per_s": 15.000000000000,
+        "coefficient": 35.574355836918
+      },
+      {
+        "index": 6,
+        "time_center_samples": 34860.294262709431,
+        "time_center_seconds": 136.173024463709,
+        "frequency_hz": 1.417627200621,
+        "duration_ms": 465.477197609587,
+        "chirp_rate_hz_per_s": -2.009473189788,
+        "coefficient": 28.061713816870
+      },
+      {
+        "index": 7,
+        "time_center_samples": 34920.333037915909,
+        "time_center_seconds": 136.407550929359,
+        "frequency_hz": 15.289623510811,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 0.057986242079,
+        "coefficient": 26.418416416052
+      },
+      {
+        "index": 8,
+        "time_center_samples": 35014.738366361635,
+        "time_center_seconds": 136.776321743600,
+        "frequency_hz": 17.982895939960,
+        "duration_ms": 206.593951315024,
+        "chirp_rate_hz_per_s": 19.924116879702,
+        "coefficient": 25.607560365188
+      },
+      {
+        "index": 9,
+        "time_center_samples": 34744.658450041206,
+        "time_center_seconds": 135.721322070473,
+        "frequency_hz": 14.077205999930,
+        "duration_ms": 241.978016936975,
+        "chirp_rate_hz_per_s": 16.000000000000,
+        "coefficient": 22.536076318242
+      },
+      {
+        "index": 10,
+        "time_center_samples": 34936.606800175243,
+        "time_center_seconds": 136.471120313185,
+        "frequency_hz": 5.820061657621,
+        "duration_ms": 812.586515060835,
+        "chirp_rate_hz_per_s": -18.288902395322,
+        "coefficient": 20.087931583314
+      },
+      {
+        "index": 1,
+        "time_center_samples": 35153.516933238287,
+        "time_center_seconds": 137.318425520462,
+        "frequency_hz": 2.366819262153,
+        "duration_ms": 743.044012361940,
+        "chirp_rate_hz_per_s": -4.133021483121,
+        "coefficient": 63.449952733704
+      },
+      {
+        "index": 2,
+        "time_center_samples": 35537.721728759454,
+        "time_center_seconds": 138.819225502967,
+        "frequency_hz": 4.498908221979,
+        "duration_ms": 459.783294230565,
+        "chirp_rate_hz_per_s": 6.415152128630,
+        "coefficient": 61.311656418566
+      },
+      {
+        "index": 3,
+        "time_center_samples": 35117.041635421971,
+        "time_center_seconds": 137.175943888367,
+        "frequency_hz": 7.128696287839,
+        "duration_ms": 222.552860756851,
+        "chirp_rate_hz_per_s": 11.472030845988,
+        "coefficient": 38.821494159049
+      },
+      {
+        "index": 4,
+        "time_center_samples": 35426.839148820167,
+        "time_center_seconds": 138.386090425079,
+        "frequency_hz": 7.241240202219,
+        "duration_ms": 358.108756641715,
+        "chirp_rate_hz_per_s": -16.480485582047,
+        "coefficient": 37.162565740508
+      },
+      {
+        "index": 5,
+        "time_center_samples": 35451.287765359048,
+        "time_center_seconds": 138.481592833434,
+        "frequency_hz": 8.249829777554,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 0.923475358055,
+        "coefficient": 33.146398127387
+      },
+      {
+        "index": 6,
+        "time_center_samples": 35383.746214560371,
+        "time_center_seconds": 138.217758650626,
+        "frequency_hz": 11.480722995988,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 5.273901984829,
+        "coefficient": 27.824228042791
+      },
+      {
+        "index": 7,
+        "time_center_samples": 35417.984067196485,
+        "time_center_seconds": 138.351500262486,
+        "frequency_hz": 18.333758424878,
+        "duration_ms": 462.138989763354,
+        "chirp_rate_hz_per_s": 4.244762678551,
+        "coefficient": 23.066753636374
+      },
+      {
+        "index": 8,
+        "time_center_samples": 35598.637988777984,
+        "time_center_seconds": 139.057179643664,
+        "frequency_hz": 13.244153569262,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 8.037230228540,
+        "coefficient": 22.427786106828
+      },
+      {
+        "index": 9,
+        "time_center_samples": 35583.319480454033,
+        "time_center_seconds": 138.997341720524,
+        "frequency_hz": 3.464677204857,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 9.064107759650,
+        "coefficient": 18.534335704107
+      },
+      {
+        "index": 10,
+        "time_center_samples": 35561.970265497206,
+        "time_center_seconds": 138.913946349598,
+        "frequency_hz": 9.096120634339,
+        "duration_ms": 391.801478449000,
+        "chirp_rate_hz_per_s": -19.382991091345,
+        "coefficient": 17.341707781414
+      },
+      {
+        "index": 1,
+        "time_center_samples": 35633.934852102524,
+        "time_center_seconds": 139.195058016025,
+        "frequency_hz": 4.986268610070,
+        "duration_ms": 280.882235267047,
+        "chirp_rate_hz_per_s": -1.000000000000,
+        "coefficient": 56.393968501388
+      },
+      {
+        "index": 2,
+        "time_center_samples": 36025.599016976033,
+        "time_center_seconds": 140.724996160063,
+        "frequency_hz": 7.212815495624,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -1.934970968635,
+        "coefficient": 54.368927822371
+      },
+      {
+        "index": 3,
+        "time_center_samples": 36004.000000000000,
+        "time_center_seconds": 140.640625000000,
+        "frequency_hz": 1.467388341184,
+        "duration_ms": 446.219468581136,
+        "chirp_rate_hz_per_s": -5.451813016813,
+        "coefficient": 51.242033368391
+      },
+      {
+        "index": 4,
+        "time_center_samples": 35885.276179539127,
+        "time_center_seconds": 140.176860076325,
+        "frequency_hz": 7.325479613143,
+        "duration_ms": 308.201958955051,
+        "chirp_rate_hz_per_s": 19.601810089430,
+        "coefficient": 35.811893278274
+      },
+      {
+        "index": 5,
+        "time_center_samples": 35869.634353418187,
+        "time_center_seconds": 140.115759193040,
+        "frequency_hz": 7.577409248206,
+        "duration_ms": 424.433474699731,
+        "chirp_rate_hz_per_s": 19.572289032487,
+        "coefficient": 28.028374534650
+      },
+      {
+        "index": 6,
+        "time_center_samples": 35999.129178964715,
+        "time_center_seconds": 140.621598355331,
+        "frequency_hz": 13.325942910997,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": 8.011447969882,
+        "coefficient": 22.899681338351
+      },
+      {
+        "index": 7,
+        "time_center_samples": 35629.636950812310,
+        "time_center_seconds": 139.178269339111,
+        "frequency_hz": 14.744417851024,
+        "duration_ms": 498.077296572962,
+        "chirp_rate_hz_per_s": 9.220464788313,
+        "coefficient": 23.303129165815
+      },
+      {
+        "index": 8,
+        "time_center_samples": 35643.417599061810,
+        "time_center_seconds": 139.232099996335,
+        "frequency_hz": 8.943272688493,
+        "duration_ms": 679.236289886614,
+        "chirp_rate_hz_per_s": 5.323094689958,
+        "coefficient": 19.310850805327
+      },
+      {
+        "index": 9,
+        "time_center_samples": 36094.612131906724,
+        "time_center_seconds": 140.994578640261,
+        "frequency_hz": 9.015450127451,
+        "duration_ms": 159.525660364754,
+        "chirp_rate_hz_per_s": -9.698376128216,
+        "coefficient": 18.704485482266
+      },
+      {
+        "index": 10,
+        "time_center_samples": 35599.784339983104,
+        "time_center_seconds": 139.061657578059,
+        "frequency_hz": 13.091694455402,
+        "duration_ms": 900.324522586266,
+        "chirp_rate_hz_per_s": -11.836909546830,
+        "coefficient": 18.210477514949
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+[submodule "sources/neoagf-eeg-analysis"]
+	path = sources/neoagf-eeg-analysis
+	url = https://github.com/agf-inc/neoagf-eeg-analysis
