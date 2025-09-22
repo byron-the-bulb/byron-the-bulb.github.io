@@ -240,68 +240,11 @@ Each signal is then transformed using an order of 10, providing a good footprint
 
 We tested on two systems : Apple MacBook Pro M1 Max 32GB running MacOS 14.6 and a custom built Intel Core i9 14th gen, 64GB RAM, NVIDIA RTX 4090 running Ubuntu 24.04.
 
-Mac / ACT / Double Precision:
-Dictionary Search Times:
-  Mean: 231.81 ms, Range: [227.92, 244.91] ms
-Transform Times:
-  Mean: 2400.47 ms, Range: [2317.07, 2569.64] ms
-Total Analysis Times:
-  Mean: 2632.29 ms, Range: [2546.01, 2797.56] ms
-Signal-to-Noise Ratios:
-  Mean: 13.26 dB, Range: [13.05, 13.42] dB
-
-Mac / CPU / Double Precision:
-Dictionary Search Times:
-  Mean: 86.04 ms, Range: [84.76, 89.51] ms
-Transform Times:
-  Mean: 894.08 ms, Range: [877.65, 947.05] ms
-Total Analysis Times:
-  Mean: 980.12 ms, Range: [962.40, 1032.62] ms
-Signal-to-Noise Ratios:
-  Mean: 13.21 dB, Range: [12.83, 13.77] dB
-
-
-Mac / CPU / Single Precision:
-Dictionary Search Times:
-  Mean: 52.43 ms, Range: [50.45, 59.34] ms
-Transform Times:
-  Mean: 521.95 ms, Range: [519.42, 523.65] ms
-Total Analysis Times:
-  Mean: 574.38 ms, Range: [569.87, 582.22] ms
-Signal-to-Noise Ratios:
-  Mean: 10.81 dB, Range: [10.26, 11.36] dB
-
-Mac / MLX / Single Precision:
-Dictionary Search Times:
-  Mean: 4.12 ms, Range: [3.95, 4.26] ms
-Transform Times:
-  Mean: 58.88 ms, Range: [55.11, 61.79] ms
-Total Analysis Times:
-  Mean: 63.01 ms, Range: [59.06, 66.00] ms
-Signal-to-Noise Ratios:
-  Mean: 10.84 dB, Range: [10.71, 10.99] dB
-
-PC / MLX / Single Precision:
-Dictionary Search Times:
-  Mean: 1.72 ms, Range: [1.60, 1.96] ms
-Transform Times:
-  Mean: 35.32 ms, Range: [33.21, 40.86] ms
-Total Analysis Times:
-  Mean: 37.04 ms, Range: [35.17, 42.55] ms
-Signal-to-Noise Ratios:
-  Mean: 10.74 dB, Range: [9.90, 11.34] dB
-
-PC / CPU / Single Precision:
-Dictionary Search Times:
-  Mean: 153.33 ms, Range: [151.69, 155.45] ms
-Transform Times:
-  Mean: 1544.03 ms, Range: [1539.01, 1550.90] ms
-Total Analysis Times:
-  Mean: 1697.36 ms, Range: [1690.69, 1704.73] ms
-Signal-to-Noise Ratios:
-  Mean: 11.12 dB, Range: [10.74, 11.29] dB
-
-
-
-
-
+| System | Dict Search Mean (ms) | Dict Search Range (ms) | Transform Mean (ms) | Transform Range (ms) | Total Analysis Mean (ms) | Total Analysis Range (ms) | SNR Mean (dB) | SNR Range (dB) |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Mac / ACT / Double Precision | 231.81 | [227.92, 244.91] | 2400.47 | [2317.07, 2569.64] | 2632.29 | [2546.01, 2797.56] | 13.26 | [13.05, 13.42] |
+| Mac / CPU / Double Precision | 86.04 | [84.76, 89.51] | 894.08 | [877.65, 947.05] | 980.12 | [962.40, 1032.62] | 13.21 | [12.83, 13.77] |
+| Mac / CPU / Single Precision | 52.43 | [50.45, 59.34] | 521.95 | [519.42, 523.65] | 574.38 | [569.87, 582.22] | 10.81 | [10.26, 11.36] |
+| Mac / MLX / Single Precision | 4.12 | [3.95, 4.26] | 58.88 | [55.11, 61.79] | 63.01 | [59.06, 66.00] | 10.84 | [10.71, 10.99] |
+| PC / MLX / Single Precision | 1.72 | [1.60, 1.96] | 35.32 | [33.21, 40.86] | 37.04 | [35.17, 42.55] | 10.74 | [9.90, 11.34] |
+| PC / CPU / Single Precision | 153.33 | [151.69, 155.45] | 1544.03 | [1539.01, 1550.90] | 1697.36 | [1690.69, 1704.73] | 11.12 | [10.74, 11.29] |
