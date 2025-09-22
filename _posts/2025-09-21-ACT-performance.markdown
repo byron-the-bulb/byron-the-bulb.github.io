@@ -44,7 +44,9 @@ std::pair<int, double> ACT::search_dictionary(const std::vector<double>& signal)
 
 The dictionary search is a simple loop that iterates over the dictionary and finds the best match for the signal.
 
-The dictionary search is called from the transform function n times, where n is the order of the transform. Each time the signal is updated to the residue which is the signal minus the best match found in the previous iteration.
+The dictionary search is called from the `ACT::transform` function n times, where n is the order of the transform (i.e. how many chirplets we want to extract from the signal). 
+The coarse result from the dictionary search is then used as an initial guess for the BFGS optimization performed in `ACT::bfgs_optimize`.
+Each time the signal is updated to the residue which is the signal minus the best match found in the previous iteration.
 
 {% highlight cpp %}
 
@@ -116,11 +118,13 @@ ACT::TransformResult ACT::transform(const std::vector<double>& signal, int order
 {% endhighlight %}
 
 
+
+
 ## Optimization using BLAS
 
 The dictionary search can be optimized using BLAS (Basic Linear Algebra Subprograms) GEMMV (**cblas_Xgemmv**) to perform the matrix multiplication in a highly optimized way, and BLAS IAMAX (**cblas_iXamax**) to find the maximum value in the vector.
 
-ACT_CPU_T uses the Eigen library instead of the Standard Template Library (STL) to store the dictionary and the signal. In order to use BLAS we need to guarantee that matrix and vectors are stored contiguously in memory, which is the case for Eigen::Matrix and Eigen::Vector.
+**ACT_CPU_T** uses the Eigen library instead of the Standard Template Library (STL) to store the dictionary and the signal. In order to use BLAS we need to guarantee that matrix and vectors are stored contiguously in memory, which is the case for Eigen::Matrix and Eigen::Vector.
 
 Here is the search_dictionary function as implemented in **ACT_CPU_T**:
 
@@ -155,7 +159,7 @@ std::pair<int,Scalar> ACT_CPU_T<Scalar>::search_dictionary(const Eigen::Ref<cons
 
 Note that we have templated the class to work with both double and single precision floating point numbers which is going to be required once we implement the GPU version of the library.
 
-the act::blas::gemv_colmajor_trans and act::blas::iamax functions are wrapper for the correct BLAS function based on the template parameter :
+the `act::blas::gemv_colmajor_trans` and `act::blas::iamax` functions are wrapper for the correct BLAS function based on the template parameter :
 
 {% highlight cpp %}
 inline void gemv_colmajor_trans(int m, int n,
@@ -228,28 +232,55 @@ std::pair<int, Scalar> ACT_MLX_T<Scalar>::search_dictionary(const Eigen::Ref<con
 {% endhighlight %}
 
 The heavy lifting in this case is done by the mx:matmul function which expects a **row-major** matrix input, thus the need to ensure that the dictionary is transposed from the column-major layout used by Eigen. 
-This is a one time operation that is done in the ensure_mlx_dict function.
+This is a one time operation that is done in the `ensure_mlx_dict` function.
 
 
 ## Profiling results
 
 We used the `profile_act.cpp` program to profile the different versions of ACT.
 The profile test generates a fairly large dictionary of approximately 600k atoms with a memory footprint of 2.3GB with double precision, 1.1GB with single precision.
+The signal length is 2 seconds, 512 samples at 256Hz.
 The test then generates 5 synthetic signals that simulate EEG frequencies and a level of noise is added.
 Each signal is then transformed using an order of 10, providing a good footprint for profiling performance.
 
-We tested on two systems : Apple MacBook Pro M1 Max 32GB running MacOS 14.6 and a custom built Intel Core i9 14th gen, 64GB RAM, NVIDIA RTX 4090 running Ubuntu 24.04.
+The following table shows the profiling results for the different versions of ACT on the two systems.
 
-| System | Dict Search Mean (ms) | Dict Search Range (ms) | Transform Mean (ms) | Transform Range (ms) | Total Analysis Mean (ms) | Total Analysis Range (ms) | SNR Mean (dB) | SNR Range (dB) |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Mac / ACT / Double | 231.81 | [227.92, 244.91] | 2400.47 | [2317.07, 2569.64] | 2632.29 | [2546.01, 2797.56] | 13.26 | [13.05, 13.42] |
-| PC / CPU / Single | 153.33 | [151.69, 155.45] | 1544.03 | [1539.01, 1550.90] | 1697.36 | [1690.69, 1704.73] | 11.12 | [10.74, 11.29] |
-| Mac / CPU / Double | 86.04 | [84.76, 89.51] | 894.08 | [877.65, 947.05] | 980.12 | [962.40, 1032.62] | 13.21 | [12.83, 13.77] |
-| Mac / CPU / Single | 52.43 | [50.45, 59.34] | 521.95 | [519.42, 523.65] | 574.38 | [569.87, 582.22] | 10.81 | [10.26, 11.36] |
-| Mac / MLX / Single | 4.12 | [3.95, 4.26] | 58.88 | [55.11, 61.79] | 63.01 | [59.06, 66.00] | 10.84 | [10.71, 10.99] |
-| PC / MLX / Single | 1.72 | [1.60, 1.96] | 35.32 | [33.21, 40.86] | 37.04 | [35.17, 42.55] | 10.74 | [9.90, 11.34] |
+- **Mac** : Apple MacBook Pro M1 Max 32GB running MacOS 14.6 
+- **PC** : custom built Intel Core i9 14th gen, 64GB RAM, NVIDIA RTX 4090 running Ubuntu 24.04.
+
+- **ACT** : the reference ACT implementation using standard library functions
+- **CPU** : the ACT implementation using BLAS
+- **MLX** : the ACT implementation using Apple MLX
+
+- **double** : double precision (`double|double64`)
+- **single** : single precision (`float|float32`)
+
+- **Dict Search** : a single dictionary search operation on its own
+- **Transform** : the full transform operation at order 10, this includes the dictionary search operation and the BFGS optimization at each turn
+- **SNR** : Signal to Noise Ratio, higher is better
+- **RT Factor** : Real Time Factor, higher is better, this is the ratio of the transform time to the signal length in seconds, in this specific case how many 2 seconds of EEG data can be processed in one second, which will give us a confidence factor on the real time performance of the algorithm.
 
 
-The MLX implementation on Apple Metal and Nvidia are providing EEG analysis of a single signal at 31x and 54x real time speed, respectively.
+| <small>System</small> | <small>Dict Search Mean (ms)</small> | <small>Dict Search Range (ms)</small> | <small>Transform Mean (ms)</small> | <small>Transform Range (ms)</small> | <small>SNR Mean (dB)</small> | <small>SNR Range (dB)</small> | <small>RT Factor</small> |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| <small>Mac / ACT / Double</small> | <small>231.81</small> | <small>[227.92, 244.91]</small> | <small>2400.47</small> | <small>[2317.07, 2569.64]</small> | <small>13.26</small> | <small>[13.05, 13.42]</small> | <small>0.8x</small> |
+| <small>PC / CPU / Single</small> | <small>153.33</small> | <small>[151.69, 155.45]</small> | <small>1544.03</small> | <small>[1539.01, 1550.90]</small> | <small>11.12</small> | <small>[10.74, 11.29]</small> | <small>1x</small> |
+| <small>Mac / CPU / Double</small> | <small>86.04</small> | <small>[84.76, 89.51]</small> | <small>894.08</small> | <small>[877.65, 947.05]</small> | <small>13.21</small> | <small>[12.83, 13.77]</small> | <small>2x</small> |
+| <small>Mac / CPU / Single</small> | <small>52.43</small> | <small>[50.45, 59.34]</small> | <small>521.95</small> | <small>[519.42, 523.65]</small> | <small>10.81</small> | <small>[10.26, 11.36]</small> | <small>3.5x</small> |
+| <small>Mac / MLX / Single</small> | <small>4.12</small> | <small>[3.95, 4.26]</small> | <small>58.88</small> | <small>[55.11, 61.79]</small> | <small>10.84</small> | <small>[10.71, 10.99]</small> | <small>31.7x</small> |
+| <small>PC / MLX / Single</small> | <small>1.72</small> | <small>[1.60, 1.96]</small> | <small>35.32</small> | <small>[33.21, 40.86]</small> | <small>10.74</small> | <small>[9.90, 11.34]</small> | <small>54x</small> |
+
+## Observations
+
+The MLX implementation on Apple Metal and Nvidia are providing EEG analysis of a single signal at 31x and 54x real time speed, respectively. These are impressive results and show that ACT can be used for real time EEG analysis of multiple EEG streams.
 
 An outlier is the Intel CPU only performance which we suspect is due to build configuration issues.
+
+## Next Steps
+
+The next steps from an optimization perspective are:
+
+- Implement parallel multisignal processing using MLX. From an algorithmic perspective this should be relatively simple, instead of multiplying a signal vector by a the dictionary matrix, we can multiply a matrix of signals by the dictionary matrix. We expect the challenge to be in data throughput.
+- Optimize the dictionary format. Identify a more compact format or compression method to reduce memory footprint.
+- Pruning the dictionary to remove redundant atoms.
+- Maybe dictionary search can be replaced by building reference atoms on the fly?
