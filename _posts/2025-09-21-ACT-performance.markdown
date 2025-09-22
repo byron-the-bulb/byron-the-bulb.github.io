@@ -242,9 +242,14 @@ We tested on two systems : Apple MacBook Pro M1 Max 32GB running MacOS 14.6 and 
 
 | System | Dict Search Mean (ms) | Dict Search Range (ms) | Transform Mean (ms) | Transform Range (ms) | Total Analysis Mean (ms) | Total Analysis Range (ms) | SNR Mean (dB) | SNR Range (dB) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Mac / ACT / Double Precision | 231.81 | [227.92, 244.91] | 2400.47 | [2317.07, 2569.64] | 2632.29 | [2546.01, 2797.56] | 13.26 | [13.05, 13.42] |
-| Mac / CPU / Double Precision | 86.04 | [84.76, 89.51] | 894.08 | [877.65, 947.05] | 980.12 | [962.40, 1032.62] | 13.21 | [12.83, 13.77] |
-| Mac / CPU / Single Precision | 52.43 | [50.45, 59.34] | 521.95 | [519.42, 523.65] | 574.38 | [569.87, 582.22] | 10.81 | [10.26, 11.36] |
-| Mac / MLX / Single Precision | 4.12 | [3.95, 4.26] | 58.88 | [55.11, 61.79] | 63.01 | [59.06, 66.00] | 10.84 | [10.71, 10.99] |
-| PC / MLX / Single Precision | 1.72 | [1.60, 1.96] | 35.32 | [33.21, 40.86] | 37.04 | [35.17, 42.55] | 10.74 | [9.90, 11.34] |
-| PC / CPU / Single Precision | 153.33 | [151.69, 155.45] | 1544.03 | [1539.01, 1550.90] | 1697.36 | [1690.69, 1704.73] | 11.12 | [10.74, 11.29] |
+| Mac / ACT / Double | 231.81 | [227.92, 244.91] | 2400.47 | [2317.07, 2569.64] | 2632.29 | [2546.01, 2797.56] | 13.26 | [13.05, 13.42] |
+| PC / CPU / Single | 153.33 | [151.69, 155.45] | 1544.03 | [1539.01, 1550.90] | 1697.36 | [1690.69, 1704.73] | 11.12 | [10.74, 11.29] |
+| Mac / CPU / Double | 86.04 | [84.76, 89.51] | 894.08 | [877.65, 947.05] | 980.12 | [962.40, 1032.62] | 13.21 | [12.83, 13.77] |
+| Mac / CPU / Single | 52.43 | [50.45, 59.34] | 521.95 | [519.42, 523.65] | 574.38 | [569.87, 582.22] | 10.81 | [10.26, 11.36] |
+| Mac / MLX / Single | 4.12 | [3.95, 4.26] | 58.88 | [55.11, 61.79] | 63.01 | [59.06, 66.00] | 10.84 | [10.71, 10.99] |
+| PC / MLX / Single | 1.72 | [1.60, 1.96] | 35.32 | [33.21, 40.86] | 37.04 | [35.17, 42.55] | 10.74 | [9.90, 11.34] |
+
+
+The MLX implementation on Apple Metal and Nvidia are providing EEG analysis of a single signal at 31x and 54x real time speed, respectively.
+
+An outlier is the Intel CPU only performance which we suspect is due to build configuration issues.
