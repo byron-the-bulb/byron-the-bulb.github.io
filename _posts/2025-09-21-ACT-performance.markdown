@@ -8,12 +8,12 @@ categories: ACT
 ## Introduction
 
 One of the goals of implementing the ACT C++ library is to be able to analyze EEG signals in real-time. 
-In order to achieve the level of performance required we decided to explore different optimization strategies and to implement the library in a platform specific way.
+In order to achieve the level of performance required for real time analysis, we decided to explore different optimization strategies, and to implement the library with a focus on portability and performance profiling.
 
 ## The Problem
 
-The Matching Pursuit algorithm requires the generation of a potentially large dictionary of chirplets which is then greedily searched to find the best approximation atom for the signal.
-The dictionary is a multi dimensional matrix residing in memory and the search operation involves multiplying the the signal with each atom in the dictionary to find the best match.
+The Matching Pursuit algorithm requires the generation of a potentially large dictionary of chirplets (atoms) which is then greedily searched to find the best approximation atom for the signal.
+The dictionary is a multi dimensional matrix residing in memory, and the search operation is basically the inner product of the signal with each atom in the dictionary, followed by a comparison to find the highest value (i.e. the best match).
 Parallel matrix multiplication is a well known problem and there are many ways to optimize it using BLAS, LAPACK, OpenMP, OpenCL, CUDA, etc.
 
 The reference C++ implementation from the **ACT** class of the dictionary search is as follows:
@@ -44,8 +44,8 @@ std::pair<int, double> ACT::search_dictionary(const std::vector<double>& signal)
 
 The dictionary search is a simple loop that iterates over the dictionary and finds the best match for the signal.
 
-The dictionary search is called from the `ACT::transform` function n times, where n is the order of the transform (i.e. how many chirplets we want to extract from the signal). 
-The coarse result from the dictionary search is then used as an initial guess for the BFGS optimization performed in `ACT::bfgs_optimize`.
+The search is called from the `ACT::transform` function n times, where n is the order of the transform (i.e. how many chirplets we want to extract from the signal). 
+The coarse result from the search is then used as an initial guess for the BFGS optimization performed in `ACT::bfgs_optimize`.
 Each time the signal is updated to the residue which is the signal minus the best match found in the previous iteration.
 
 {% highlight cpp %}
@@ -122,7 +122,7 @@ ACT::TransformResult ACT::transform(const std::vector<double>& signal, int order
 
 ## Optimization using BLAS
 
-The dictionary search can be optimized using BLAS (Basic Linear Algebra Subprograms) GEMMV (**cblas_Xgemmv**) to perform the matrix multiplication in a highly optimized way, and BLAS IAMAX (**cblas_iXamax**) to find the maximum value in the vector.
+The dictionary search can be optimized using BLAS (Basic Linear Algebra Subprograms) GEMMV (**cblas_Xgemmv**) to perform the matrix inner product in a highly optimized way, and BLAS IAMAX (**cblas_iXamax**) to find the maximum value in the results.
 
 **ACT_CPU_T** uses the Eigen library instead of the Standard Template Library (STL) to store the dictionary and the signal. In order to use BLAS we need to guarantee that matrix and vectors are stored contiguously in memory, which is the case for Eigen::Matrix and Eigen::Vector.
 
