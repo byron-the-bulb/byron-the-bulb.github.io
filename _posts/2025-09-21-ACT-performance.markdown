@@ -198,7 +198,7 @@ ACT_Accelerate_T derives from ACT_CPU_T and overrides some core functions to spe
 
 ## Optimization using Apple MLX
 
-Apple MLX is a framework that provides a high level interface to the Apple Silicon GPU but also compiles using CUDA to run on NVIDIA GPUs.
+Apple MLX is a framework that provides a high level interface to the Apple Metal GPU but also compiles using CUDA to run on NVIDIA GPUs.
 
 The MLX version of search_dictionary is as follows:
 
