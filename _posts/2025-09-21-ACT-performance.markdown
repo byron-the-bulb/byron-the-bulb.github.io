@@ -13,7 +13,7 @@ In order to achieve the level of performance required for real time analysis, we
 ## The Problem
 
 The Matching Pursuit algorithm requires the generation of a potentially large dictionary of chirplets (atoms) which is then greedily searched to find the best approximation atom for the signal.
-The dictionary is a multi dimensional matrix residing in memory, and the search operation is basically the inner product of the signal with each atom in the dictionary, followed by a comparison to find the highest value (i.e. the best match).
+The dictionary is a multi dimensional matrix residing in memory, and the search operation is basically the inner product of the signal with each atom in the dictionary, while keeping track of the maximum value returned by the inner product (i.e. the best match).
 Parallel matrix multiplication is a well known problem and there are many ways to optimize it using BLAS, LAPACK, OpenMP, OpenCL, CUDA, etc.
 
 The reference C++ implementation from the **ACT** class of the dictionary search is as follows:
@@ -243,6 +243,8 @@ The signal length is 2 seconds, 512 samples at 256Hz.
 The test then generates 5 synthetic signals that simulate EEG frequencies and a level of noise is added.
 Each signal is then transformed using an order of 10, providing a good footprint for profiling performance.
 
+The profiler warms up the pipeline by executing a single search that is not included in the results.
+
 The following table shows the profiling results for the different versions of ACT on the two systems.
 
 - **Mac** : Apple MacBook Pro M1 Max 32GB running MacOS 14.6 
@@ -284,3 +286,9 @@ The next steps from an optimization perspective are:
 - Optimize the dictionary format. Identify a more compact format or compression method to reduce memory footprint.
 - Pruning the dictionary to remove redundant atoms.
 - Maybe dictionary search can be replaced by building reference atoms on the fly?
+
+
+## References
+
+- Matching pursuit algorithm: [Wikipedia - Matching Pursuit](https://en.wikipedia.org/wiki/Matching_pursuit)
+
