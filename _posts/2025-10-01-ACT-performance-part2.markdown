@@ -5,6 +5,8 @@ date:   2025-10-01 10:11:27 -0700
 categories: ACT
 ---
 
+[[Github : ACT C++ Library]](https://github.com/nemes-inc/ACT-lib)
+
 In the previous post [Performance Optimization of the ACT C++ Library on CPU and GPU](/ACT-performance) we covered hardware acceleration and performance optimization to transform a single signal using the ACT algorithm.
 Here we will cover how to transform multiple signals in parallel in real time!
 

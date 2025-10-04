@@ -5,6 +5,8 @@ date:   2025-09-21 23:11:27 -0700
 categories: ACT
 ---
 
+[[Github : ACT C++ Library]](https://github.com/nemes-inc/ACT-lib)
+
 ## Introduction
 
 One of the goals of implementing the ACT C++ library is to be able to analyze EEG signals in real-time. 

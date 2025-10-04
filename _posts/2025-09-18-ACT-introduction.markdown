@@ -4,7 +4,7 @@ title:  "Introduction to Adaptive Chirplet Transformation using the ACT C++ Libr
 date:   2025-09-18 14:38:29 -0700
 categories: ACT
 ---
-[[Github : ACT C++ Library]](https://github.com/agf-inc/neoagf-eeg-analysis)
+[[Github : ACT C++ Library]](https://github.com/nemes-inc/ACT-lib)
 
 Adaptive Chirplet Transform (ACT) is a signal processing technique that extends the concept of chirplet transform (CT) to adaptively select the best chirplet basis functions for representing a given signal.
 
