@@ -289,6 +289,9 @@ The next steps from an optimization perspective are:
 - Pruning the dictionary to remove redundant atoms.
 - Maybe dictionary search can be replaced by building reference atoms on the fly?
 
+## Next Article
+
+[Performance Optimization of the ACT C++ Library on CPU and GPU Part 2 - Handling multiple signals](/act/2025/10/01/ACT-performance-part2.html)
 
 ## References
 

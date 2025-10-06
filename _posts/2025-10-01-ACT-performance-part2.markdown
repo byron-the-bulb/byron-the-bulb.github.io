@@ -7,7 +7,7 @@ categories: ACT
 
 [[Github : ACT C++ Library]](https://github.com/nemes-inc/ACT-lib)
 
-In the previous post [Performance Optimization of the ACT C++ Library on CPU and GPU](/ACT-performance) we covered hardware acceleration and performance optimization to transform a single signal using the ACT algorithm.
+In the previous post [Performance Optimization of the ACT C++ Library on CPU and GPU](/act/2025/09/21/ACT-performance.html) we covered hardware acceleration and performance optimization to transform a single signal using the ACT algorithm.
 Here we will cover how to transform multiple signals in parallel in real time!
 
 
@@ -22,6 +22,32 @@ Given that multiple signals vectors can be represented as a matrix, we can perfo
 Here are the relevant code snippets for the CPU and GPU implementations:
 
 ### CPU with BLAS
+
+The `gemm_colmajor` function is a wrapper for the `cblas_sgemm` and `cblas_dgemm` functions from the BLAS library for each of the supported scalar types (float32 and double).
+
+{% highlight cpp %}
+// gemm (column-major): C := alpha * op(A) * op(B) + beta * C
+inline void gemm_colmajor(CBLAS_TRANSPOSE transA, CBLAS_TRANSPOSE transB,
+                          int M, int N, int K,
+                          float alpha,
+                          const float* A, int lda,
+                          const float* B, int ldb,
+                          float beta,
+                          float* C, int ldc) {
+    cblas_sgemm(CblasColMajor, transA, transB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
+}
+inline void gemm_colmajor(CBLAS_TRANSPOSE transA, CBLAS_TRANSPOSE transB,
+                          int M, int N, int K,
+                          double alpha,
+                          const double* A, int lda,
+                          const double* B, int ldb,
+                          double beta,
+                          double* C, int ldc) {
+    cblas_dgemm(CblasColMajor, transA, transB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
+}
+{% endhighlight %}
+
+The search is implemented as a matrix multiplication between the  dictionary matrix and the signal matrix.
 
 {% highlight cpp %}
     for (int it = 0; it < opts.order; ++it) {

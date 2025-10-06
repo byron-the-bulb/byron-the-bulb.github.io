@@ -123,6 +123,9 @@ The dictionary used is focused on the sleep study frequencies of interest, i.e. 
 
 {% include act_p5_embed.html %}
 
+## Next Article
+
+[Performance Optimization of the ACT C++ Library on CPU and GPU](/act/2025/09/21/ACT-performance.html)
 
 ## Additional media
 
